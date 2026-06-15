@@ -30,7 +30,7 @@ Program 'lists1' that can find out the minimum and maximum elements of a list:
 
 Program 'my_time'  which returns a string containing the date in Swedish format YYMMDD:
 - Compile: `$ c:c(my_time).`
-- Run: `$ my_time:swedish_date()
+- Run: `$ my_time:swedish_date()`
 
 Note that it isn't recommended to call this program 'time' since it is a system reserved keyword.
 
