@@ -1,7 +1,6 @@
 # README
 
-The Erl language files located in this path, are the result of following these tutorials:
-1. `https://erlang.org/course/exercises.html`
+The Erl language files located in this path, are the result of following the official Erlang website's tutorial: `https://erlang.org/course/exercises.html`
 
 Note that every Erlang program must be compiled from the Erlang terminal, which you can open by typing `$ erl` in your terminal.
 The compiled programs can be run from the Erlang terminal as well, by typing the compiled '.beam' file name followed by colon and the name of the exported function plus any needed parameters and a '.' at the end to indicate the instruction is complete: `$ <compiled-program-name>.beam:<exported-function-name>(..<parameters>).`.
