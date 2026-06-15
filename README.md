@@ -3,17 +3,25 @@
 The Erl language files located in this path, are the result of following these tutorials:
 1. `https://erlang.org/course/exercises.html`
 
+Note that every Erlang program must be compiled from the Erlang terminal, which you can open by typing `$ erl` in your terminal.
+The compiled programs can be run from the Erlang terminal as well, by typing the compiled '.beam' file name followed by colon and the name of the exported function plus any needed parameters and a '.' at the end to indicate the instruction is complete: `$ <compiled-program-name>.beam:<exported-function-name>(..<parameters>).`.
+The number of parameters to be passed is inidcated in the *export* instruction after the exported function name: `-export(<function-name>/<No-parameters)`.
+
 ## Entering a program
 **To compile and run the program:**
 Enter the Erlang terminal: `$ erl`
 Compile: `$ c:c(demo).`
 Run: `$ demo:double(<N>).`
+Exit the Erlang terminal.
 
 ## Simple sequential programs
 **To compile and run the program:**
 Enter the Erlang terminal: `$ erl`
 Compile: `$ c:c(temp).`
 Run: `$ temp:convert("f",100).` would return 37.777, and `$ temp:convert("c",37.777).` would return 100.0.
+
+Compile: `$ c:c(mathStuff).`
+Run: `$ mathStuff:perimeter("circle",1)` would return 3.14159. 
 
 *Note that Erlang treats as different datatypes "<x>" and '<x>'.*
 
