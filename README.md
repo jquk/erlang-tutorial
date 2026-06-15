@@ -3,8 +3,25 @@
 The Erl language files located in this path, are the result of following these tutorials:
 1. `https://erlang.org/course/exercises.html`
 
-# INTERACTION BETWEEN PROCESSES, CONCURRENCY
-## 1.
+## Entering a program
+**To compile and run the program:**
+Enter the Erlang terminal: `$ erl`
+Compile: `$ c:c(demo).`
+Run: `$ demo:double(<N>).`
+
+## Simple sequential programs
+**To compile and run the program:**
+Enter the Erlang terminal: `$ erl`
+Compile: `$ c:c(temp).`
+Run: `$ temp:convert("f",100).` would return 37.777, and `$ temp:convert("c",37.777).` would return 100.0.
+
+*Note that Erlang treats as different datatypes "<x>" and '<x>'.*
+
+## Simple recursive programs
+
+
+## Interaction between processes, concurrency
+### 1.
 File: `concurrency1.erl`
 A function which starts 2 processes, and sends a message M times forewards and backwards between them. After the messages have been sent the processes should terminate gracefully.
 
