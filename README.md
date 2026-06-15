@@ -24,7 +24,15 @@ Program 'mathStuff' with functions to calculate the perimiter of geometric forms
 *Note that Erlang treats as different datatypes "<x>" and '<x>'.*
 
 ## Simple recursive programs
+Program 'lists1' that can find out the minimum and maximum elements of a list:
+- Compile: `$ c:c(lists1).`
+- Run: `$ lists1:min_max([4,1,33,-2,77,-1,0]).` would return {-2, 77}.
 
+Program 'my_time'  which returns a string containing the date in Swedish format YYMMDD:
+- Compile: `$ c:c(my_time).`
+- Run: `$ my_time:swedish_date()
+
+Note that it isn't recommended to call this program 'time' since it is a system reserved keyword.
 
 ## Interaction between processes, concurrency
 ### 1.
