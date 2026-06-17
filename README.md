@@ -83,3 +83,27 @@ Worker <0.100.0> terminating gracefully.
 Worker <0.101.0> terminating gracefully.
 Worker <0.102.0> terminating gracefully.
 `
+
+### 4. Master and Slaves, error handling
+**Compile and run:**
+- Compile: `$ c:(ms).`
+- Run:
+  - `$ ms:start(4).` to create four slaves.
+  - `$ ms:to_slave('hi', 1).` to send 'hi' to slave No 1.
+  - `$ ms:to_slave('die', 1).` to kill the slave No 1; It'll be restarted.
+
+**Manually terminate the master in the terminal:**
+- `MasterPid = whereis(master),`
+- `unregister(master),`  % Optional - unregister AFTER getting PID
+- `exit(MasterPid, kill).`
+or
+- `exit(whereis(master), kill).`
+
+**Manually terminate a slave in the terminal:**
+- `ms:start(4).`
+- `Slaves = ms:get_slaves().`
+- `{_, PidToKill} = lists:nth(2, Slaves).`  to get slave 2.
+- `exit(PidToKill, kill).`  to force kill without die message.
+
+Master should restart it.
+Note: exit(Pid, kill) sends an untrappable exit signal - the slave dies immediately without executing any cleanup.
